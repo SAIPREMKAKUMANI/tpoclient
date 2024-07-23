@@ -49,7 +49,9 @@ function Home() {
   async function deleteNote(idx) {
     try {
       console.log("Delete" + idx);
-      const res = await axios.post(`/api/v1/tpo/deleteNotices/${idx}`);
+      const res = await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/api/v1/tpo/deleteNotices/${idx}`
+      );
       const updatedNotes = new Set(
         [...categoryNotes].filter((note, index) => index !== idx)
       );
