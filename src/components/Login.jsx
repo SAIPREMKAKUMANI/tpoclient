@@ -68,74 +68,76 @@ function Login(props) {
           aria-describedby="modal-modal-description"
         >
           {/* {!valid && <img className="logo" src={logo} />} */}
-          <div className="form-group-login">
-            <div className="logo-container">
-              <img className="logo" src={logo} />
-            </div>
-            <div className="form-container">
-              <p>
-                <b>Hello {name}</b>
-              </p>
-              <form onSubmit={handleClick}>
-                <label htmlFor="name" className="form-label">
-                  Name
-                </label>
-                <input
-                  name="name"
-                  style={{ marginLeft: 0 }}
-                  className="form-control"
-                  placeholder="Saiprem"
-                  onChange={handleName}
-                  value={name}
-                />
-                <label htmlFor="email" className="form-label">
-                  <EmailIcon />
-                </label>
-                <input
-                  name="email"
-                  style={{ marginLeft: 0 }}
-                  className="form-control"
-                  type="email"
-                  placeholder="name@gmail.com"
-                  onChange={handleInput}
-                  value={email}
-                />
-                <label htmlFor="password" className="form-label">
-                  <KeyIcon />
-                </label>
-                <input
-                  name="pass"
-                  style={{ marginLeft: 0 }}
-                  className="form-control"
-                  type="password"
-                  placeholder="**********"
-                  onChange={handlePassword}
-                  value={pass}
-                />
-                <Link to="/forgot-password" className="forgot-password-link">
-                  Forgot Password?
-                </Link>
-                {/* Add the link to the ForgotPassword component */}
-                <button
-                  type="submit"
-                  className="btn btn-primary"
-                  style={{
-                    display: "block",
-                    marginLeft: 10,
-                    marginTop: 10,
-                    marginBottom: 10,
-                  }}
-                >
-                  Log In
-                </button>
-                <button
-                  onClick={() => props.onFormSwitch("Register")}
-                  className="btn btn-primary"
-                  style={{ marginLeft: 10, marginBottom: 10 }}
-                >
-                  Don't have an Account? Register Here
-                </button>
-              </form>
+          <div className="modal-overlay ">
+            <div className="form-group-login">
+              <div className="logo-container">
+                <img className="logo" src={logo} />
+              </div>
+              <div className="form-container">
+                <p>
+                  <b>Hello {name}</b>
+                </p>
+                <form onSubmit={handleClick}>
+                  <label htmlFor="name" className="form-label">
+                    Name
+                  </label>
+                  <input
+                    name="name"
+                    style={{ marginLeft: 0 }}
+                    className="form-control"
+                    placeholder="Saiprem"
+                    onChange={handleName}
+                    value={name}
+                  />
+                  <label htmlFor="email" className="form-label">
+                    <EmailIcon />
+                  </label>
+                  <input
+                    name="email"
+                    style={{ marginLeft: 0 }}
+                    className="form-control"
+                    type="email"
+                    placeholder="name@gmail.com"
+                    onChange={handleInput}
+                    value={email}
+                  />
+                  <label htmlFor="password" className="form-label">
+                    <KeyIcon />
+                  </label>
+                  <input
+                    name="pass"
+                    style={{ marginLeft: 0 }}
+                    className="form-control"
+                    type="password"
+                    placeholder="**********"
+                    onChange={handlePassword}
+                    value={pass}
+                  />
+                  <Link to="/forgot-password" className="forgot-password-link">
+                    Forgot Password?
+                  </Link>
+                  {/* Add the link to the ForgotPassword component */}
+                  <button
+                    type="submit"
+                    className="btn btn-primary"
+                    style={{
+                      display: "block",
+                      marginLeft: 10,
+                      marginTop: 10,
+                      marginBottom: 10,
+                    }}
+                  >
+                    Log In
+                  </button>
+                  <button
+                    onClick={() => props.onFormSwitch("Register")}
+                    className="btn btn-primary"
+                    style={{ marginLeft: 10, marginBottom: 10 }}
+                  >
+                    Don't have an Account? Register Here
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </Modal>

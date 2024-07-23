@@ -18,7 +18,7 @@ function Home() {
   const { currentUser } = useContext(UserContext);
 
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const [categoryNotes, setCategoryNotes] = useState(new Set());
+  const [categoryNotes, setCategoryNotes] = useState([]);
 
   useEffect(() => {
     async function fetchNotes() {
@@ -28,7 +28,8 @@ function Home() {
         );
         console.log("fetch notes : ", res.data.success);
         if (res.data.success) {
-          setCategoryNotes(new Set(res.data.notices));
+          console.log(res.data.notices);
+          setCategoryNotes(res.data.notices);
         } else {
           toast.error(res.data.message);
         }
@@ -39,7 +40,7 @@ function Home() {
     if (selectedCategory) {
       fetchNotes();
     }
-  }, [selectedCategory]);
+  }, [selectedCategory, categoryNotes]);
 
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
@@ -52,8 +53,8 @@ function Home() {
       const res = await axios.post(
         `${process.env.REACT_APP_BACKEND_URL}/api/v1/tpo/deleteNotices/${idx}`
       );
-      const updatedNotes = new Set(
-        [...categoryNotes].filter((note, index) => index !== idx)
+      const updatedNotes = categoryNotes.filter(
+        (note, index) => note.id !== idx
       );
       setCategoryNotes(updatedNotes);
       if (res.data.success) {

@@ -147,79 +147,81 @@ function Register(props) {
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <div className="form-group-register">
-            <div className="logo-container">
-              <img className="logo" src={logo} />
-            </div>
-            <div className="form-container">
-              <form onSubmit={handleClick}>
-                <p>
-                  <b>Welcome {details.name}</b>
-                </p>
-                <label className="form-label">
-                  <DriveFileRenameOutlineIcon />
-                </label>
-                <input
-                  className="form-control"
-                  name="name"
-                  style={{ marginLeft: 0 }}
-                  placeholder="Full Name"
-                  onChange={handleChange}
-                  value={details.name}
-                />
-                <label for="email" className="form-label">
-                  <EmailIcon />
-                </label>
-                <input
-                  name="mail"
-                  className="form-control"
-                  style={{ marginLeft: 0 }}
-                  type="email"
-                  placeholder="name@gmail.com"
-                  onChange={handleChange}
-                  value={details.mail}
-                />
-                <label for="password" className="form-label">
-                  <KeyIcon />
-                </label>
-                <input
-                  name="pass"
-                  class="form-control"
-                  style={{ marginLeft: 0 }}
-                  type="password"
-                  placeholder="**********"
-                  onChange={handleChange}
-                  value={details.pass}
-                />
-                <div class="form-check">
-                  <input
-                    name="fac"
-                    class="form-check-input"
-                    type="checkbox"
-                    value={details.fac}
-                    onChange={handleChange}
-                    id="flexCheckChecked"
-                  />
-                  <label class="form-check-label" for="flexCheckChecked">
-                    {" "}
-                    Faculty{" "}
+          <div className="modal-overlay">
+            <div className="form-group-register">
+              <div className="logo-container">
+                <img className="logo" src={logo} />
+              </div>
+              <div className="form-container">
+                <form onSubmit={handleClick}>
+                  <p>
+                    <b>Welcome {details.name}</b>
+                  </p>
+                  <label className="form-label">
+                    <DriveFileRenameOutlineIcon />
                   </label>
-                </div>
-                <button
-                  type="submit"
-                  className="btn btn-primary"
-                  style={{ marginLeft: 10, marginTop: 10, marginBottom: 10 }}
-                >
-                  Register Here
-                </button>
-                <button
-                  className="btn btn-primary"
-                  style={{ marginLeft: 10, marginTop: 10, marginBottom: 10 }}
-                  onClick={() => props.onFormSwitch("login")}
-                >
-                  Already Have An Account? Login Here
-                </button>
-              </form>
+                  <input
+                    className="form-control"
+                    name="name"
+                    style={{ marginLeft: 0 }}
+                    placeholder="Full Name"
+                    onChange={handleChange}
+                    value={details.name}
+                  />
+                  <label for="email" className="form-label">
+                    <EmailIcon />
+                  </label>
+                  <input
+                    name="mail"
+                    className="form-control"
+                    style={{ marginLeft: 0 }}
+                    type="email"
+                    placeholder="name@gmail.com"
+                    onChange={handleChange}
+                    value={details.mail}
+                  />
+                  <label for="password" className="form-label">
+                    <KeyIcon />
+                  </label>
+                  <input
+                    name="pass"
+                    class="form-control"
+                    style={{ marginLeft: 0 }}
+                    type="password"
+                    placeholder="**********"
+                    onChange={handleChange}
+                    value={details.pass}
+                  />
+                  <div class="form-check">
+                    <input
+                      name="fac"
+                      class="form-check-input"
+                      type="checkbox"
+                      value={details.fac}
+                      onChange={handleChange}
+                      id="flexCheckChecked"
+                    />
+                    <label class="form-check-label" for="flexCheckChecked">
+                      {" "}
+                      Faculty{" "}
+                    </label>
+                  </div>
+                  <button
+                    type="submit"
+                    className="btn btn-primary"
+                    style={{ marginLeft: 10, marginTop: 10, marginBottom: 10 }}
+                  >
+                    Register Here
+                  </button>
+                  <button
+                    className="btn btn-primary"
+                    style={{ marginLeft: 10, marginTop: 10, marginBottom: 10 }}
+                    onClick={() => props.onFormSwitch("login")}
+                  >
+                    Already Have An Account? Login Here
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </Modal>
