@@ -1,0 +1,56 @@
+.place-p {
+  font-size: 1.875rem !important;
+  font-weight: bold;
+  font-family: Times New Roman, Times, serif;
+  padding-left: 23.4375rem;
+  background-color: coral;
+}
+
+.rcircle {
+  width: 9.375rem;
+  border-radius: 50%;
+  background: #bcd6ff;
+  display: inline-block;
+  margin-left: 2.5rem;
+  line-height: 0;
+  position: relative;
+}
+
+.rcircle::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.rcircle .txt {
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+@media (max-width: 48rem) {
+  .place-p {
+    font-size: 1.5rem !important;
+    padding-left: 18.75rem;
+  }
+
+  .rcircle {
+    width: 7.5rem;
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 36rem) {
+  .place-p {
+    font-size: 1.125rem !important;
+    padding-left: 14.0625rem;
+  }
+
+  .rcircle {
+    width: 5.625rem;
+    margin-left: 1.5rem;
+  }
+}

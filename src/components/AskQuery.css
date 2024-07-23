@@ -1,0 +1,116 @@
+.modify-query-btn {
+  position: relative;
+  top: 23.125rem;
+  left: 70.625rem;
+}
+
+.modifyQuery {
+  margin-left: 1.875rem;
+  height: 21.875rem;
+  position: relative;
+  bottom: 6.25rem;
+  top: 0;
+  border: 1px;
+  width: 30rem;
+  background-color: #fbf9f9;
+  border: black;
+  border-style: dashed;
+  margin-top: 0;
+  left: 40.625rem;
+}
+
+.modifyInput {
+  display: block;
+  width: 95%;
+  padding-left: 0.625rem;
+  margin-left: 0.625rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  appearance: none;
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-block {
+  width: 27.083334rem;
+  margin-left: 0.625rem;
+  height: 2.646834rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 1200px) {
+  .modify-query-btn {
+    top: 18rem;
+    left: 56rem;
+  }
+
+  .modifyQuery {
+    margin-left: 1.5rem;
+    height: 17.5rem;
+    width: 24rem;
+    left: 32rem;
+  }
+
+  .btn-block {
+    width: 21.666667rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .modify-query-btn {
+    top: 14rem;
+    left: 44rem;
+  }
+
+  .modifyQuery {
+    margin-left: 1.25rem;
+    height: 14rem;
+    width: 20rem;
+    left: 26rem;
+  }
+
+  .btn-block {
+    width: 18.055556rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .modify-query-btn {
+    top: 10rem;
+    left: 32rem;
+  }
+
+  .modifyQuery {
+    margin-left: 1rem;
+    height: 10.5rem;
+    width: 16rem;
+    left: 20rem;
+  }
+
+  .btn-block {
+    width: 14.444445rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .modify-query-btn {
+    top: 7rem;
+    left: 24rem;
+  }
+
+  .modifyQuery {
+    margin-left: 0.75rem;
+    height: 7rem;
+    width: 12rem;
+    left: 15rem;
+  }
+
+  .btn-block {
+    width: 10.833334rem;
+  }
+}

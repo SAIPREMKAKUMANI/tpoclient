@@ -1,0 +1,81 @@
+.login {
+  min-height: 70vh;
+}
+
+.form-group-login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 27rem;
+  width: 50rem;
+  margin-top: 12.5rem;
+  background-color: #fbf9f9;
+  border: black;
+  border-style: solid;
+  border-radius: 0.63rem;
+}
+
+.logo-container {
+  margin-left: 1rem;
+  padding-right: 1.9rem;
+  border-right: 1px solid #ccc; /* Add this line */
+  height: 100%; /* Add this line to make the border full height */
+  display: flex; /* Add this line */
+  align-items: center; /* Add this line to vertically center the logo */
+}
+
+.form-container {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.form-control {
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  width: 25.1875rem !important;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.form-label {
+  margin-left: 0.625rem;
+  font-size: 0.8125rem;
+}
+
+.forgot-password-link {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 48rem) {
+  .form-group-login {
+    width: 24rem;
+    height: 16rem;
+    margin-top: 10rem;
+  }
+
+  .form-control {
+    width: 22.5rem;
+  }
+}
+
+@media (max-width: 36rem) {
+  .form-group-login {
+    width: 18rem;
+    height: 12rem;
+    margin-top: 7.5rem;
+  }
+
+  .form-control {
+    width: 16.875rem;
+  }
+}

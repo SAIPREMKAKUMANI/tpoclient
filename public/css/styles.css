@@ -1,0 +1,126 @@
+.navbar-brand > img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.login_form {
+  width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6.25rem;
+}
+
+.row {
+  margin-bottom: 0.625rem;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1 0 auto;
+}
+
+.form-group > form > p {
+  font-style: normal;
+  font-family: fantasy;
+  margin-left: 0.625rem;
+}
+
+.form-check {
+  margin-left: 0.625rem;
+  margin-top: 0.625rem;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.note {
+  flex: 0 0 auto; /* Prevent .note from growing or shrinking */
+  /* Existing styles for .note */
+}
+
+.info {
+  min-height: 90vh;
+}
+
+.testimonial-image-container {
+  text-align: center;
+}
+
+.testimonial-img {
+  width: 6.25rem;
+  border-radius: 50%;
+  position: relative;
+  top: -2.5rem;
+}
+
+.profile-card {
+  background-color: #ffffff;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture img {
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1.25rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.2);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333333;
+}
+
+.email {
+  font-size: 1rem;
+  color: #666666;
+  margin: 0.3125rem 0;
+}
+
+.modify-textArea {
+  margin-left: 0.625rem;
+  margin-top: 0.625rem;
+  width: 28.458334rem;
+  height: 7.833334rem;
+}
+
+.form-check-label {
+  margin-left: 0.625rem;
+}

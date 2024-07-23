@@ -1,0 +1,36 @@
+.barGraph {
+  display: block;
+  box-sizing: border-box;
+  height: 25rem;
+  width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1200px) {
+  .barGraph {
+    width: 40rem;
+    height: 20rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .barGraph {
+    width: 32rem;
+    height: 16rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .barGraph {
+    width: 24rem;
+    height: 12rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .barGraph {
+    width: 18rem;
+    height: 9rem;
+  }
+}
