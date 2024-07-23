@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useParams, useNavigate } from "react-router-dom";
+import "./ResetPassword.css";
 
 const ResetPassword = () => {
   const [newPassword, setNewPassword] = useState("");
@@ -20,42 +21,48 @@ const ResetPassword = () => {
     try {
       const response = await axios.post(
         `${process.env.REACT_APP_BACKEND_URL}/api/v1/tpo/reset-password/${token}`,
-        {
-          newPassword,
-        }
+        { newPassword }
       );
       toast.success(response.data.message);
-      navigate("/"); // Redirect to the login page or any other desired route
+      navigate("/");
     } catch (error) {
       toast.error(error.response.data.message);
     }
   };
 
   return (
-    <div>
-      <h2>Reset Password</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="newPassword">New Password</label>
+    <div className="reset-password-container">
+      <h2 className="reset-password-title">Reset Password</h2>
+      <form className="reset-password-form" onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="newPassword" className="form-label">
+            New Password
+          </label>
           <input
             type="password"
             id="newPassword"
+            className="form-input"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
             required
           />
         </div>
-        <div>
-          <label htmlFor="confirmPassword">Confirm Password</label>
+        <div className="form-group">
+          <label htmlFor="confirmPassword" className="form-label">
+            Confirm Password
+          </label>
           <input
             type="password"
             id="confirmPassword"
+            className="form-input"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             required
           />
         </div>
-        <button type="submit">Reset Password</button>
+        <button type="submit" className="submit-button-reset">
+          Reset Password
+        </button>
       </form>
     </div>
   );
